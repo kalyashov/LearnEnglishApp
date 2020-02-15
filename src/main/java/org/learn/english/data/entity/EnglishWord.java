@@ -8,6 +8,7 @@ public class EnglishWord {
 
     private String word;
     private String translation;
+    private WordCategory category;
 
     public EnglishWord() {
     }
@@ -15,6 +16,7 @@ public class EnglishWord {
     public EnglishWord(String word, String translation) {
         this.word = word;
         this.translation = translation;
+        this.category = WordCategory.OTHER;
     }
 
     public String getWord() {
@@ -31,5 +33,13 @@ public class EnglishWord {
 
     public void setTranslation(String translation) {
         this.translation = translation;
+    }
+
+    public WordCategory getCategory() {
+        return category;
+    }
+
+    public void setCategory(WordCategory category) {
+        this.category = category;
     }
 }
