@@ -1,13 +1,26 @@
 package org.learn.english.data.entity;
 
+import javax.persistence.*;
+
 /**
  * Английское слово с переводом
  * Created by kalyashov-ga on 2020-02-05.
  */
+@Entity
+@Table(name = "ENGLISH_WORD")
 public class EnglishWord {
 
+    @Id
+    @GeneratedValue
+    @Column(name = "Id", nullable = false)
+    private Long id;
+
+    @Column(name = "WORD", nullable = false)
     private String word;
+
+    @Column(name = "TRANSLATION", nullable = false)
     private String translation;
+
     private WordCategory category;
 
     public EnglishWord() {
