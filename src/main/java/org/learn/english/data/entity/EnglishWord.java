@@ -21,6 +21,10 @@ public class EnglishWord {
     @Column(name = "TRANSLATION", nullable = false)
     private String translation;
 
+    @Column(name = "TRANSCRIPTION")
+    private String transcription;
+
+    @Column(name = "CATEGORY")
     private WordCategory category;
 
     public EnglishWord() {
@@ -30,6 +34,14 @@ public class EnglishWord {
         this.word = word;
         this.translation = translation;
         this.category = WordCategory.OTHER;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getWord() {
@@ -46,6 +58,14 @@ public class EnglishWord {
 
     public void setTranslation(String translation) {
         this.translation = translation;
+    }
+
+    public String getTranscription() {
+        return transcription;
+    }
+
+    public void setTranscription(String transcription) {
+        this.transcription = transcription;
     }
 
     public WordCategory getCategory() {

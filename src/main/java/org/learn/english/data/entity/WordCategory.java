@@ -5,11 +5,18 @@ package org.learn.english.data.entity;
  */
 public enum WordCategory
 {
-    FOOD,
-    PROFESSION,
-    CLOTHES,
-    DEVICES,
-    CITY,
-    COUNTRY,
-    OTHER
+    FOOD("Еда"),
+    PROFESSION("Профессия"),
+    CLOTHES("Одежда"),
+    DEVICES("Устройства"),
+    CITY("Город"),
+    COUNTRY("Страна"),
+    OTHER("Другое");
+
+    private String translation;
+
+    WordCategory(String translation)
+    {
+        this.translation = translation;
+    }
 }
